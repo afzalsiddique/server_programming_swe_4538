@@ -1,4 +1,6 @@
 const http = require("http")
+const json_obj = require("./loadContent")
+about = json_obj.about
 
 const server = http.createServer((request,response) => {
     
@@ -10,8 +12,8 @@ const server = http.createServer((request,response) => {
         response.write("<h2>This is a base url</h2>")
         response.end()
     }
-    else if (request.url=="/home"){
-        response.write("<h2>This is a home url</h2>")
+    else if (request.url=="/about"){
+        response.write(about)
         response.end()
     } 
     else {
