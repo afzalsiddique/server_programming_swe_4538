@@ -26,7 +26,7 @@ router.get("/register", (req,res)=>{
 router.post("/register", (req,res)=>{
     const username = req.body.username
     const email = req.body.email
-    res.send(`user with E-mail ${email} and Username ${username} is requesting to register`)
+    res.send(`<H1>user with E-mail ${email} and Username ${username} is requesting to register</H1>`)
     // res.sendFile("register.html",{root:"./views/users/"});
 })
 
