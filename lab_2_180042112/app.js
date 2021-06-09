@@ -14,7 +14,7 @@ app.get("/about", (req,res)=>{
     res.send("<H1>About</H1>")
 })
 app.get("/contact", (req,res)=>{
-    res.send("<H1>Contact</H1>")
+    res.json({name:"John Reese",profession:"NA"})
 })
 app.use((req,res)=>{
     res.status(401).send("error 404. Page does not exist")
