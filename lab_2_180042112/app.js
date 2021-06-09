@@ -8,8 +8,9 @@ app.post("/", (req,res)=>{
     res.send("<H1>Homepage - post request</H1>")
 })
 app.get("/about", (req,res)=>{
-    res.cookie("dummy_cookie","afzal")
-    // res.clearCookie("dummy_cookie")
+    res.append("id","180042112")
+    // res.cookie("username","afzal")
+    // res.clearCookie("username")
     res.send("<H1>About</H1>")
 })
 app.get("/contact", (req,res)=>{
