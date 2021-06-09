@@ -6,6 +6,7 @@ const {logger, printSomething}= require('./middlewares/app.middlewares')
 
 // app.use("/users/",userRoutes) // localhost:7777/users/register
 app.use(userRoutes) // localhost:7777/register
+app.use(express.static("public"))
 
 app.use([logger, printSomething])
 
