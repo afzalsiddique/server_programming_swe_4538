@@ -6,7 +6,8 @@ const userRoutes = require("./routes/userRoutes.routes")
 app.use(userRoutes) // localhost:7777/register
 
 app.get("/", (req,res)=>{
-    res.send("<H1>Homepage - get request</H1>")
+    // res.send("<H1>Homepage - get request</H1>")
+    res.sendfile("home.html",{root: './views/'})
 })
 app.post("/", (req,res)=>{
     res.send("<H1>Homepage - post request</H1>")
