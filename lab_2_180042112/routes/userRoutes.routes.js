@@ -1,5 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const bodyParser = require('body-parser')
+
+router.use(bodyParser.urlencoded({extended: false}))
+router.use(bodyParser.json())
 
 router.get("/login", (req,res)=>{
     // const id = req.query.id
@@ -18,6 +22,12 @@ router.get("/dashboard/:id/:username", (req,res)=>{
 router.get("/register", (req,res)=>{
     res.sendFile("register.html",{root:"./views/users/"});
     // res.send("this is register page")
+})
+router.post("/register", (req,res)=>{
+    const username = req.body.username
+    const email = req.body.email
+    res.send(`user with E-mail ${email} and Username ${username} is requesting to register`)
+    // res.sendFile("register.html",{root:"./views/users/"});
 })
 
 module.exports = router
