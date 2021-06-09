@@ -13,7 +13,9 @@ const logger = (req,res,next)=>{
 // app.use("/users/",userRoutes) // localhost:7777/users/register
 app.use(userRoutes) // localhost:7777/register
 
-app.get("/", logger,(req,res)=>{
+app.use(logger)
+
+app.get("/",(req,res)=>{
     // res.send("<H1>Homepage - get request</H1>")
     res.sendfile("home.html",{root: './views/'})
 })
