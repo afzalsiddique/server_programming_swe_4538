@@ -2,7 +2,7 @@ const logger = (req,res,next)=>{
     const method = req.method
     const url = req.url
     const date = new Date().getFullYear().toString()
-    console.log(method,url,date)
+    console.log(`printing using logger ${method} ${url} ${date}`)
     next()
 }
 

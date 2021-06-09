@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 const userRoutes = require("./routes/userRoutes.routes")
+const morgan = require("morgan")
 const {logger, printSomething}= require('./middlewares/app.middlewares')
 
 
 // app.use("/users/",userRoutes) // localhost:7777/users/register
 app.use(userRoutes) // localhost:7777/register
 app.use(express.static("public"))
+app.use(morgan("tiny"))
 
 app.use([logger, printSomething])
 
