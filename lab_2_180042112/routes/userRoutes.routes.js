@@ -19,7 +19,10 @@ router.get("/login", getLogIn)
 
 router.get("/dashboard", getDashboard)
 
-router.get("/register", getRegister)
-router.post("/register", isLoggedIn, postRegister)
+// these two could be replace by one line
+// router.get("/register", getRegister)
+// router.post("/register", isLoggedIn, postRegister)
+// one liner
+router.route('/register').all(isLoggedIn).get(getRegister).post(postRegister) 
 
 module.exports = router
