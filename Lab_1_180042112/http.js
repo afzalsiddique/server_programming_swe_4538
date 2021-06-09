@@ -11,7 +11,7 @@ const work = json_obj.data.work
 
 const final_server = http.createServer((request,response) => {
     
-    response.writeHead(201,{'Content-Type': "text/html"})
+    response.writeHead(201,{'Content-Type': "text/plain"})
 
     if(request.url=="/"){
         response.write(index)
