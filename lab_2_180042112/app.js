@@ -1,19 +1,13 @@
 const express = require('express')
 const app = express()
 const userRoutes = require("./routes/userRoutes.routes")
+const {logger, printSomething}= require('./middlewares/app.middlewares')
 
-const logger = (req,res,next)=>{
-    const method = req.method
-    const url = req.url
-    const date = new Date().getFullYear().toString()
-    console.log(method,url,date)
-    next()
-}
 
 // app.use("/users/",userRoutes) // localhost:7777/users/register
 app.use(userRoutes) // localhost:7777/register
 
-app.use(logger)
+app.use([logger, printSomething])
 
 app.get("/",(req,res)=>{
     // res.send("<H1>Homepage - get request</H1>")
