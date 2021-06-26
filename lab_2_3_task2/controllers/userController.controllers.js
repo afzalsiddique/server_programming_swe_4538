@@ -3,8 +3,12 @@ const getRegister = (req,res)=>{
 }
 
 const postRegister = (req,res)=>{
-    const username = req.body.username
-    if (username=="admin"){
+    const f_name = req.body.f_name
+    const l_name = req.body.l_name
+    const email = req.body.email
+    const password = req.body.password
+    const password2 = req.body.password2
+    if (reg_validate(f_name,l_name,email,password,password2)){
         res.redirect("/login")
     }
     // const email = req.body.email
@@ -14,6 +18,15 @@ const postRegister = (req,res)=>{
         res.redirect("/register")
     }
 
+}
+const reg_validate = (f_name,l_name,email,password,password2)=>{
+    if (f_name=="" || l_name=="" || email=="" || password=="" || password2=="")
+        return false
+    if (password.length<6)
+        return false
+    if (password!==password2)
+        return false
+    return true
 }
 
 const getLogIn = (req,res)=>{
