@@ -57,6 +57,10 @@ const postLogin = (req,res)=>{
 }
 
 const login_validate= (email,password)=>{
+    con.query(`SELECT password FROM auth_table where email='${email}'`, function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    });
     return true
 }
 const getDashboard = (req,res)=>{
