@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
 // const isLoggedIn = require('./../middlewares/auth.middlewares')
-const {getRegister,postRegister, getLogIn, getDashboard} = require('./../controllers/userController.controllers')
+const {getRegister,postRegister, getLogIn, getDashboard,postLogin} = require('./../controllers/userController.controllers')
 
 router.use(bodyParser.urlencoded({extended: false}))
 router.use(bodyParser.json())
@@ -26,4 +26,5 @@ router.post("/register", postRegister)
 // one liner
 // router.route('/register').all(isLoggedIn).get(getRegister).post(postRegister) 
 
+router.post("/login", postLogin)
 module.exports = router

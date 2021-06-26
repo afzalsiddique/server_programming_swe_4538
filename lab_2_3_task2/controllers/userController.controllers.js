@@ -37,8 +37,22 @@ const getLogIn = (req,res)=>{
     res.sendFile("login.html",{root:"./views/users/"})
 }
 
+const postLogin = (req,res)=>{
+    const email = req.body.email
+    const password = req.body.password
+    if (login_validate(email,password)){
+        res.redirect("/dashboard")
+    }
+    else{
+        res.redirect("/login")
+    }
+}
+
+const login_validate= (email,password)=>{
+    return true
+}
 const getDashboard = (req,res)=>{
     res.send('User Dashboard')
 }
 
-module.exports = {getRegister,postRegister, getLogIn, getDashboard}
+module.exports = {getRegister,postRegister, getLogIn, getDashboard,postLogin}
