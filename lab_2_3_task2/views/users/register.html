@@ -7,18 +7,46 @@
     <title>Register</title>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <!-- <script src='main.js'></script> -->
+    <script>
+        function validateForm() {
+        let f_name = document.forms["myForm"]["f_name"].value;
+        let l_name = document.forms["myForm"]["l_name"].value;
+        let email = document.forms["myForm"]["email"].value;
+        let password = document.forms["myForm"]["password"].value;
+        let password2 = document.forms["myForm"]["password2"].value;
+        if (f_name == "" || l_name=="" || email=="" || password=="" ) {
+            alert("All fields must be filled out");
+            return false;
+            }
+        }
+        if (password!=password2){
+            alert("passwords do not match");
+            return false;
+        }
+    </script>
 </head>
 <body>
-    <H2> Try admin as username </H2>
     <H1> Registration Form</H1>
-    <form action="/register" method="POST">
+    <form name=myForm action="/register" onsubmit="return validateForm()" method="POST">
         <div>
-            <label for="username">Username</label>
-            <input type="text" name="username">
+            <label for="f_name">First Name</label>
+            <input type="text" name="f_name">
+        </div>
+        <div>
+            <label for="l_name">Last Name</label>
+            <input type="text" name="l_name">
         </div>
         <div>
             <label for="email">E-mail</label>
             <input type="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="password2">Retype Password</label>
+            <input type="password" name="password2">
         </div>
         <div>
             <button type = "submit">Register</button>
