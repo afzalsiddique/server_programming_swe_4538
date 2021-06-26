@@ -56,13 +56,18 @@ const postLogin = (req,res)=>{
     }
 }
 
+
 const login_validate= (email,password)=>{
+    var mypass;
     con.query(`SELECT password FROM auth_table where email='${email}'`, function (err, result, fields) {
         if (err) throw err;
-        console.log(result);
+        const retrieved_pass =JSON.parse(JSON.stringify(result))[0].password
+        mypass = retrieved_pass.slice()
     });
-    return true
+    console.log(mypass)
+    return true;
 }
+
 const getDashboard = (req,res)=>{
     res.send('User Dashboard')
 }
