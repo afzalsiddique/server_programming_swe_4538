@@ -9,7 +9,7 @@ router.use(bodyParser.json())
 
 
 
-router.get("/dashboard", getDashboard)
+// router.get("/dashboard", getDashboard)
 
 router.get("/register", getRegister)
 router.post("/register", postRegister)

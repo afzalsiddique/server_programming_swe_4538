@@ -12,7 +12,7 @@ const isLoggedIn = (req,res,next)=>{
             else
                 flag=false
             if (flag)
-                res.redirect('/dashboard')
+                res.send(`Dashboard for ${email}`)
             else
                 res.redirect('/login')
         });
