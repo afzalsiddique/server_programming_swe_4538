@@ -1,4 +1,6 @@
 const con = require('../mysql_db_connection')
+const bcrypt = require('bcrypt')
+const saltRounds = 10
 const getRegister = (req,res)=>{
     res.sendFile("register.html",{root:"./views/users/"});
 }
@@ -11,11 +13,13 @@ const postRegister = (req,res)=>{
     const password2 = req.body.password2
     if (reg_validate(f_name,l_name,email,password,password2)){
         console.log("Ready for insertion");
-        var sql = `INSERT INTO auth_table (email, firstname,lastname,password) VALUES ('${email}', '${f_name}','${l_name}','${password}')`;
+        bcrypt.hash(password, saltRounds, function(err, hash) {
+        var sql = `INSERT INTO auth_table (email, firstname,lastname,password) VALUES ('${email}', '${f_name}','${l_name}','${hash}')`;
         con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("1 record inserted");
-        res.redirect("/login")
+            if (err) throw err;
+            console.log("1 record inserted");
+            res.redirect("/login")
+            });
         });
 
     }
