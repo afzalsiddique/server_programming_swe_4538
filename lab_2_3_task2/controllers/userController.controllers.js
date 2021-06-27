@@ -57,20 +57,23 @@ const postLogin = (req,res)=>{
 }
 
 
-const login_validate= (email,password)=>{
-    var flag='initialValue';
-    con.query(`SELECT password FROM auth_table where email='${email}'`, function (err, result, fields) {
-        if (err) throw err;
-        const retrieved_pass =JSON.parse(JSON.stringify(result))[0].password
-        if (password===retrieved_pass)
-            flag=true
-        else
-            flag=false
-        console.log(flag) // true
-    });
-    console.log(flag) // initialValue. this line executes before con.query
-    
-}
+// const login_validate= (email,password)=>{
+//     var flag='initialValue';
+//     con.query(`SELECT password FROM auth_table where email='${email}'`, function (err, result, fields) {
+//         if (err) throw err;
+//         const retrieved_pass =JSON.parse(JSON.stringify(result))[0].password
+//         if (password===retrieved_pass)
+//             flag=true
+//         else
+//             flag=false
+//         if (flag){
+            
+//         }
+//         // console.log(flag) // true
+//     });
+//     // console.log(flag) // initialValue. this line executes before con.query
+// 
+// }
 
 const getDashboard = (req,res)=>{
     res.send('User Dashboard')
