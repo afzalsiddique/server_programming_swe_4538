@@ -12,7 +12,20 @@ const isLoggedIn = (req,res,next)=>{
             else
                 flag=false
             if (flag)
-                res.send(`Dashboard for ${email}`)
+                res.send(`
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Dashboard</title>
+                            </head>
+                            <body>
+                                <H1> Dashboard  for ${email}</H1>
+                                
+                            </body>
+                        `
+                        )
+                // res.send(`Dashboard for ${email}`)
             else
                 res.redirect('/login')
         });
