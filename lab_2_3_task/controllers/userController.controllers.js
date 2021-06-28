@@ -50,14 +50,27 @@ const getLogIn = (req,res)=>{
 }
 
 const postLogin = (req,res)=>{
-    const email = req.body.email
-    const password = req.body.password
-    if (login_validate(email,password)){
-        res.redirect("/dashboard")
-    }
-    else{
-        res.redirect("/login")
-    }
+
+    const email = req.body.email;
+    const password= req.body.password;
+    con.query(`SELECT password FROM auth_table where email='${email}'`, function (err, result, fields) {
+                 if (err) throw err;
+              const retrieved_pass =JSON.parse(JSON.stringify(result))[0].password
+              console.log(password)
+              console.log(retrieved_pass)
+              bcrypt.compare(password, retrieved_pass, function(err, result) {
+                if(!err)
+                {
+                    console.log('not error')
+                    res.send("<H1>asdf</H1>")
+                }
+                else{
+                    res.send("invalid password");
+                }
+    
+});
+})
+
 }
 
 

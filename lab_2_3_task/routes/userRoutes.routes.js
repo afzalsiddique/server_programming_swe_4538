@@ -15,7 +15,7 @@ router.get("/register", getRegister)
 router.post("/register", postRegister)
 
 router.get("/login", getLogIn)
-router.post("/login", isLoggedIn, postLogin)
+router.post("/login", postLogin)
 module.exports = router
 
 

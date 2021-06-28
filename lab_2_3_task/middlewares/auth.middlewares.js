@@ -12,9 +12,10 @@ const isLoggedIn =(req,res,next)=>{
               console.log(password)
               console.log(retrieved_pass)
               bcrypt.compare(password, retrieved_pass, function(err, result) {
-                if(result == true)
+                if(!err)
                 {
-                    next();
+                    console.log('not error')
+                    res.send("<H1>asdf</H1>")
                 }
                 else{
                     res.send("invalid password");
@@ -25,6 +26,7 @@ const isLoggedIn =(req,res,next)=>{
 
 
 
-})}
+})
+}
 
 module.exports = isLoggedIn
