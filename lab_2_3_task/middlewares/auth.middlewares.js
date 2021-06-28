@@ -11,7 +11,7 @@ const isLoggedIn =(req,res,next)=>{
                const retrieved_pass = result[0].password
               // const retrieved_pass =JSON.parse(JSON.stringify(result))[0].password
               console.log(password)
-                console.log('balsal')
+                console.log('between pass and hash')
               console.log(retrieved_pass)
               bcrypt.compare(password, retrieved_pass, function(err, result) {
                 if(!err)
