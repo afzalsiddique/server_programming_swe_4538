@@ -10,6 +10,6 @@ app.set("view engine", "ejs")
 const index_routes = require('./routes/index.routes')
 const users_routes = require('./routes/users.routes')
 app.use(index_routes)
-app.use(users_routes)
+app.use("/users",users_routes)
 
 module.exports=app
