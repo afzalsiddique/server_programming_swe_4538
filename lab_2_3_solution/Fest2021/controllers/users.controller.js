@@ -9,7 +9,7 @@ const postLogin = (req,res)=>{
 }
 
 const getRegister = (req,res)=>{
-    res.render("users/register.ejs")
+    res.render("users/register.ejs",{errors:req.flash('errors')})
 }
 
 const postRegister = (req,res)=>{
@@ -30,6 +30,7 @@ const postRegister = (req,res)=>{
 
     if (errors.length>0){
         console.log(errors)
+        req.flash("errors",errors)
         res.redirect("/users/register")
     }else{
         // Create new user
