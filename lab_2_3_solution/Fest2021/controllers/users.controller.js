@@ -19,6 +19,24 @@ const postRegister = (req,res)=>{
     console.log(password)
     console.log(confirm_password)
 
+    // Data validation
+    const errors = []
+    if (!name || !email || !password || !confirm_password)
+        errors.push("all fields are required")
+    if (password.length<6)
+        errors.push("password must be atleast 6 characters")
+    if (password!==confirm_password)
+        errors.push("password do not match")
+
+    if (errors.length>0){
+        console.log(errors)
+        res.redirect("/users/register")
+    }else{
+        // Create new user
+        res.redirect("/users/login")
+    }
+
+
 }
 
 module.exports={getLogin,postLogin,getRegister,postRegister}
