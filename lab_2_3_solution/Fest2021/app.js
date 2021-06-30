@@ -5,6 +5,8 @@ const app = express()
 app.use(express.static("public"))
 // View Engine
 app.set("view engine", "ejs")
+// Body Parser
+app.use(express.urlencoded({extended: false}))
 
 // routes
 const index_routes = require('./routes/index.routes')
