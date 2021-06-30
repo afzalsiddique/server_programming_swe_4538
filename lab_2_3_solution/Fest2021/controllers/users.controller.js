@@ -2,8 +2,10 @@ const getLogin = (req,res)=>{
     res.render("users/login.ejs")
 }
 
-const postLogin = ()=>{
-
+const postLogin = (req,res)=>{
+    const {email,password}= req.body
+    console.log(email)
+    console.log(password)
 }
 
 const getRegister = (req,res)=>{
