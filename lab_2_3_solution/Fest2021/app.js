@@ -4,6 +4,10 @@ const app = express()
 const session = require('express-session')
 const flash = require('connect-flash')
 const mongose = require('mongoose')
+const passport = require('passport')
+
+// passport
+require('./config/passport')(passport)
 
 // connect to DB
 // console.log(process.env.MongoURI)
@@ -23,6 +27,8 @@ app.use(session({
     secret:'secret',resave:true, saveUninitialized:true
 }))
 app.use(flash())
+app.use(passport.initialize())
+app.use(passport.session())
 
 // Body Parser
 app.use(express.urlencoded({extended: false}))

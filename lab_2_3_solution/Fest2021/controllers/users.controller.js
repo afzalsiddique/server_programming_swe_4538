@@ -16,11 +16,6 @@ const getRegister = (req,res)=>{
 
 const postRegister = (req,res)=>{
     const {name,email,password,confirm_password} = req.body
-    console.log(name)
-    console.log(email)
-    console.log(password)
-    console.log(confirm_password)
-
     // Data validation
     const errors = []
     if (!name || !email || !password || !confirm_password)
