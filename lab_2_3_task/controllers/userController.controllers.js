@@ -83,7 +83,7 @@ const postLogin = (req,res)=>{
                 if(!err)
                 {
                     console.log('not adf error')
-                    res.send("<H1>asdf</H1>")
+                    res.send(`<H1>Dashboard for ${email}</H1>`)
                 }
                 else{
                     res.send("invalid password");
