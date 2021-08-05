@@ -14,9 +14,9 @@ const postMO = (req, res) => {
   console.log(tshirt);
 
   let registrationFee = 0;
-  if (category === "School") {
+  if (category == "School") {
     registrationFee = 250;
-  } else if (category === "College") {
+  } else if (category == "College") {
     registrationFee = 400;
   } else {
     registrationFee = 500;
