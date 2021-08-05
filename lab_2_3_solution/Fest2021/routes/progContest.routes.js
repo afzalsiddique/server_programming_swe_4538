@@ -13,7 +13,7 @@ const {
   deletePC,
   paymentDonePC,
   selectPC,
-} = require("../controllers/progContest.controller.controller");
+} = require("../controllers/progContest.controller");
 
 router.get("/register", ensureAuthenticated, addUserData, getPC);
 router.post("/register", ensureAuthenticated, addUserData, postPC);
