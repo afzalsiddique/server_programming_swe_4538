@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40809212-94f8-499a-a431-21bf38401976" name="Default Changelist" comment="start lab task">
-      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/form_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/tables_dynamic_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/config/passport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.contoller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.contoller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/users.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/users.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/middlewares/auth.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/MathOlympiad.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/MathOlympiad.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/User.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/User.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/MathOlympiad.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/MathOlympiad.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/index.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/index.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/users.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/users.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/dashboard-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/dashboard-content.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/mo/list-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/mo/list-content.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/mo/register-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/mo/register-content.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/navbar.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/scripts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/scripts.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/form_delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/math-olympiad/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/math-olympiad/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/math-olympiad/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/math-olympiad/register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/news/add-news.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/news/news-list.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/tables_dynamic_delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/welcome.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/welcome.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +77,7 @@
       <workItem from="1628085501237" duration="125000" />
       <workItem from="1628085646200" duration="136000" />
       <workItem from="1628085889389" duration="1149000" />
-      <workItem from="1628138911813" duration="18163000" />
+      <workItem from="1628138911813" duration="20323000" />
     </task>
     <task id="LOCAL-00001" summary="start lab task">
       <created>1628142949437</created>
