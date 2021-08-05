@@ -6,7 +6,7 @@
       <div class="col-md-12 col-sm-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Math Olympiad <small>Register Participant</small></h2>
+            <h2>Programming Contest <small>Register Participant</small></h2>
             <ul class="nav navbar-right panel_toolbox">
               <li>
                 <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -38,7 +38,7 @@
 
             <form
               method="POST"
-              action="/MathOlympiad/register"
+              action="/ProgContest/register"
               id="demo-form2"
               data-parsley-validate
               class="form-horizontal form-label-left"
@@ -47,13 +47,13 @@
                 <label
                   class="col-form-label col-md-3 col-sm-3 label-align"
                   for="first-name"
-                  >Name <span class="required">*</span>
+                  >Team Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6">
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="teamName"
+                    name="teamName"
                     required="required"
                     class="form-control"
                   />
@@ -64,13 +64,13 @@
                 <label
                   class="col-form-label col-md-3 col-sm-3 label-align"
                   for="first-name"
-                  >Contact No. <span class="required">*</span>
+                  >Institution Name<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6">
                   <input
                     type="text"
-                    id="contact"
-                    name="contact"
+                    id="institutionName"
+                    name="institutionName"
                     required="required"
                     class="form-control"
                   />
@@ -79,61 +79,114 @@
 
               <div class="item form-group">
                 <label
-                  class="col-form-label col-md-3 col-sm-3 label-align"
-                  for="first-name"
-                  >Email
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >Coach Name<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6">
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-control"
+                          type="text"
+                          id="coachName"
+                          name="coachName"
+                          required="required"
+                          class="form-control"
                   />
                 </div>
               </div>
 
               <div class="item form-group">
                 <label
-                  class="col-form-label col-md-3 col-sm-3 label-align"
-                  for="first-name"
-                  >Institution <span class="required">*</span>
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >Coach Contact<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6">
                   <input
-                    type="text"
-                    id="institution"
-                    name="institution"
-                    required="required"
-                    class="form-control"
+                          type="text"
+                          id="coachContact"
+                          name="coachContact"
+                          required="required"
+                          class="form-control"
                   />
                 </div>
               </div>
 
               <div class="item form-group">
                 <label
-                  class="col-form-label col-md-3 col-sm-3 label-align"
-                  for="first-name"
-                  >Category <span class="required">*</span>
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >Coach Email<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6">
-                  <select class="form-control" id="category" name="category">
-                    <option disabled>... Choose Option ...</option>
-                    <option value="School">School</option>
-                    <option value="College">College</option>
-                    <option value="University">University</option>
-                  </select>
+                  <input
+                          type="email"
+                          id="coachEmail"
+                          name="coachEmail"
+                          required="required"
+                          class="form-control"
+                  />
                 </div>
               </div>
 
               <div class="item form-group">
                 <label
-                  class="col-form-label col-md-3 col-sm-3 label-align"
-                  for="first-name"
-                  >T-Shirt <span class="required">*</span>
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >leaderName<span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6">
-                  <select class="form-control" id="tshirt" name="tshirt">
+                  <input
+                          type="text"
+                          id="leaderName"
+                          name="leaderName"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >leaderContact<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="text"
+                          id="leaderContact"
+                          name="leaderContact"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >leaderEmail<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="email"
+                          id="leaderEmail"
+                          name="leaderEmail"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >leadertshirt<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <select class="form-control" id="leadertshirt" name="leadertshirt">
                     <option disabled>... Choose Option ...</option>
                     <option value="M">Medium</option>
                     <option value="L">Large</option>
@@ -141,6 +194,141 @@
                   </select>
                 </div>
               </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member1Name<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="text"
+                          id="member1Name"
+                          name="member1Name"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member1Contact<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="text"
+                          id="member1Contact"
+                          name="member1Contact"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member1Email<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="email"
+                          id="member1Email"
+                          name="member1Email"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member1tshirt<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <select class="form-control" id="member1tshirt" name="member1tshirt">
+                    <option disabled>... Choose Option ...</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member2Name<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="text"
+                          id="member2Name"
+                          name="member2Name"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member2Contact<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="text"
+                          id="member2Contact"
+                          name="member2Contact"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member2Email<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <input
+                          type="email"
+                          id="member2Email"
+                          name="member2Email"
+                          required="required"
+                          class="form-control"
+                  />
+                </div>
+              </div>
+
+              <div class="item form-group">
+                <label
+                        class="col-form-label col-md-3 col-sm-3 label-align"
+                        for="first-name"
+                >member2tshirt<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6">
+                  <select class="form-control" id="member2tshirt" name="member2tshirt">
+                    <option disabled>... Choose Option ...</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                  </select>
+                </div>
+              </div>
+
 
               <div class="ln_solid"></div>
               <div class="item form-group">
