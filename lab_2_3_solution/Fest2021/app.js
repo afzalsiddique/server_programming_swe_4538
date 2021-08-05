@@ -1,42 +1,50 @@
-require('dotenv').config()
-const express = require('express')
-const app = express()
-const session = require('express-session')
-const flash = require('connect-flash')
-const mongose = require('mongoose')
-const passport = require('passport')
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const session = require("express-session");
+const flash = require("connect-flash");
+const mongoose = require("mongoose");
+const passport = require("passport");
 
-// passport
-require('./config/passport')(passport)
+//Passport Strategy
+require("./config/passport")(passport);
 
-// connect to DB
-// console.log(process.env.MongoURI)
-mongose.connect(process.env.MongoURI,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
-    console.log("connected to database")
-}).catch((eror)=>{
-    console.log("error occured while connecting to database")
-    console.log(error)
-})
+//Connect to DB
+mongoose
+  .connect(process.env.MongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to Database!");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+//Static Resources
+app.use(express.static("public"));
+//View Engine
+app.set("view engine", "ejs");
 
-// static resources
-app.use(express.static("public"))
-// View Engine
-app.set("view engine", "ejs")
-// use session and flash
-app.use(session({
-    secret:'secret',resave:true, saveUninitialized:true
-}))
-app.use(flash())
-app.use(passport.initialize())
-app.use(passport.session())
+//Session and Flash
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
-// Body Parser
-app.use(express.urlencoded({extended: false}))
+//Body Parser
+app.use(express.urlencoded({ extended: false }));
 
-// routes
-const index_routes = require('./routes/index.routes')
-const users_routes = require('./routes/users.routes')
-app.use(index_routes)
-app.use("/users",users_routes)
+//Routes
+const indexRoutes = require("./routes/index.routes");
+const userRoutes = require("./routes/users.routes");
+app.use(indexRoutes);
+app.use("/users", userRoutes);
 
-module.exports=app
+module.exports = app;
