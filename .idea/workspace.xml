@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40809212-94f8-499a-a431-21bf38401976" name="Default Changelist" comment="start lab task">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/config/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/users.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/users.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/middlewares/auth.middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/User.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/User.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/index.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/index.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/users.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/users.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/dashboard-content.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/header.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/navbar.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/scripts.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/dashboard.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/news/add-news.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/news/news-list.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/users/login.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/users/register.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/welcome.ejs" beforeDir="false" />
-    </list>
+    <list default="true" id="40809212-94f8-499a-a431-21bf38401976" name="Default Changelist" comment="start lab task" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +38,7 @@
       <workItem from="1628085501237" duration="125000" />
       <workItem from="1628085646200" duration="136000" />
       <workItem from="1628085889389" duration="1149000" />
-      <workItem from="1628138911813" duration="5929000" />
+      <workItem from="1628138911813" duration="6233000" />
     </task>
     <task id="LOCAL-00001" summary="start lab task">
       <created>1628142949437</created>
