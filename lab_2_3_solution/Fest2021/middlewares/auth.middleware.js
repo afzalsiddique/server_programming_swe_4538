@@ -13,4 +13,4 @@ const addUserData=(req,res,next)=>{
     next();
 }
 
-module.exports = {ensureAuthenticated,addUserData}
+module.exports = ensureAuthenticated
