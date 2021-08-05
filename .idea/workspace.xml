@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40809212-94f8-499a-a431-21bf38401976" name="Default Changelist" comment="start lab task">
-      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/README.md" afterDir="false" />
+    <list default="true" id="b3c9eb16-6ae9-475a-b3af-8e7f39294f28" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/server_programming_swe_4538.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/progContest.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/ProgContest.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/progContest.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/list-content.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/register-content.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +30,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProjectId" id="1wGWeDl73n2lqaSf8PPDUMAvH4a" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/progContest.controller.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1wJmGeXWmjyUa6p0vY47Bs3VPo5" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -37,38 +46,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="40809212-94f8-499a-a431-21bf38401976" name="Default Changelist" comment="" />
-      <created>1628085499219</created>
+      <changelist id="b3c9eb16-6ae9-475a-b3af-8e7f39294f28" name="Default Changelist" comment="" />
+      <created>1628184970909</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1628085499219</updated>
-      <workItem from="1628085501237" duration="125000" />
-      <workItem from="1628085646200" duration="136000" />
-      <workItem from="1628085889389" duration="1149000" />
-      <workItem from="1628138911813" duration="21812000" />
+      <updated>1628184970909</updated>
+      <workItem from="1628184973687" duration="2411000" />
     </task>
-    <task id="LOCAL-00001" summary="start lab task">
-      <created>1628142949437</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1628142949438</updated>
-    </task>
-    <task id="LOCAL-00002" summary="start lab task">
-      <created>1628143294504</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1628143294505</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,7 +80,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="start lab task" />
-    <option name="LAST_COMMIT_MESSAGE" value="start lab task" />
   </component>
 </project>
