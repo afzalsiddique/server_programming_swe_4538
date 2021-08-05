@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3c9eb16-6ae9-475a-b3af-8e7f39294f28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/register-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/register-content.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/prog-contest/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/prog-contest/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/prog-contest/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/prog-contest/register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/list-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/list-content.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628184970909</updated>
-      <workItem from="1628184973687" duration="4458000" />
+      <workItem from="1628184973687" duration="5416000" />
     </task>
     <servers />
   </component>
