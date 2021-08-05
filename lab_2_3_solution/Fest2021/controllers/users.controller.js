@@ -15,7 +15,7 @@ const postLogin = (req, res, next) => {
 };
 
 const getRegister = (req, res) => {
-  res.render("users/register.ejs", { errors: req.flash("errors") });
+  res.render("users/register-content.ejs", { errors: req.flash("errors") });
 };
 
 const postRegister = (req, res) => {
