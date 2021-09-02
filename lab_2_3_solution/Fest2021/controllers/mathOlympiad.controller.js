@@ -1,17 +1,16 @@
-require('dotenv').config();
 const MathOlympiad = require("../models/MathOlympiad.model");
-const user= process.env.UserEmail
-const pass= process.env.UserPass
+const nodemailer = require("nodemailer");
 
-const nodemailer = require('nodemailer')
+const senderMail = process.env.UserEmail;
+const password = process.env.UserPass;
 
 const transporter = nodemailer.createTransport({
   service: "hotmail",
   auth: {
-    user: user,
-    pass: pass
-  }
-})
+    user: senderMail,
+    pass: password,
+  },
+});
 
 const getMO = (req, res) => {
   res.render("math-olympiad/register.ejs", { error: req.flash("error") });
@@ -27,13 +26,6 @@ const postMO = (req, res) => {
     registrationFee = 400;
   } else {
     registrationFee = 500;
-  }
-
-  const options={
-    from:user,
-    to: email,
-    subject: "Registration successfully completed for Math Olympiad",
-    text: "Hey if this mail comes to you. then it node mailer worked perfectly. Thanks."
   }
 
   const total = registrationFee;
@@ -60,24 +52,37 @@ const postMO = (req, res) => {
         tshirt,
       });
       participant
-        .save()
-        .then(() => {
-          error = "Participant has been registered successfully!";
-          transporter.sendMail(options, function (err, info){
-            if (err){
-              console.log(err)
-              return
-            }
-            console.log("Sent: "+info.response)
+          .save()
+          .then(() => {
+            error = "Participant has been registered successfully!";
+
+            const to = email;
+            const subject = "Team registered successfully in Math Olympiad";
+            const body = "Your team registration completed.";
+
+            const options = {
+              from: senderMail,
+              to: to,
+              subject: subject,
+              text: body,
+            };
+
+            transporter.sendMail(options, function (err, info) {
+              if (err) {
+                console.log(err);
+                return;
+              }
+              console.log("Sent: " + info.response);
+            });
+
+            req.flash("error", error);
+            res.redirect("/MathOlympiad/register");
           })
-          req.flash("error", error);
-          res.redirect("/MathOlympiad/register");
-        })
-        .catch(() => {
-          error = "An unexpected error occured while registering participant";
-          req.flash("error", error);
-          res.redirect("/MathOlympiad/register");
-        });
+          .catch(() => {
+            error = "An unexpected error occured while registering participant";
+            req.flash("error", error);
+            res.redirect("/MathOlympiad/register");
+          });
     }
   });
 };
@@ -86,88 +91,88 @@ const getMOList = (req, res) => {
   let all_participant = [];
   let error = "";
   MathOlympiad.find()
-    .then((data) => {
-      all_participant = data;
-      res.render("math-olympiad/list.ejs", {
-        error: req.flash("error"),
-        participants: all_participant,
+      .then((data) => {
+        all_participant = data;
+        res.render("math-olympiad/list.ejs", {
+          error: req.flash("error"),
+          participants: all_participant,
+        });
+      })
+      .catch(() => {
+        error = "Failed to retrieve data!";
+        res.render("math-olympiad/list.ejs", {
+          error: req.flash("error", error),
+          participants: all_participant,
+        });
       });
-    })
-    .catch(() => {
-      error = "Failed to retrieve data!";
-      res.render("math-olympiad/list.ejs", {
-        error: req.flash("error", error),
-        participants: all_participant,
-      });
-    });
 };
 
 const deleteMO = (req, res) => {
   let error = "";
 
   MathOlympiad.deleteOne({ _id: req.params.id })
-    .then(() => {
-      let error = "Data has been deleted successfully!";
-      req.flash("error", error);
-      res.redirect("/MathOlympiad/list");
-    })
-    .catch(() => {
-      let error = "Failed to delete data";
-      req.flash("error", error);
-      res.redirect("/MathOlympiad/list");
-    });
+      .then(() => {
+        let error = "Data has been deleted successfully!";
+        req.flash("error", error);
+        res.redirect("/MathOlympiad/list");
+      })
+      .catch(() => {
+        let error = "Failed to delete data";
+        req.flash("error", error);
+        res.redirect("/MathOlympiad/list");
+      });
 };
 
 const paymentDoneMO = (req, res) => {
   const id = req.params.id;
 
   MathOlympiad.findOne({ _id: id })
-    .then((participant) => {
-      participant.paid = participant.total;
-      participant
-        .save()
-        .then(() => {
-          let error = "Payment completed successfully!";
-          req.flash("error", error);
-          res.redirect("/MathOlympiad/list");
-        })
-        .catch(() => {
-          let error = "Data could not be updated!";
-          req.flash("error", error);
-          res.redirect("/MathOlympiad/list");
-        });
-    })
-    .catch(() => {
-      let error = "Data could not be updated!";
-      req.flash("error", error);
-      res.redirect("/MathOlympiad/list");
-    });
+      .then((participant) => {
+        participant.paid = participant.total;
+        participant
+            .save()
+            .then(() => {
+              let error = "Payment completed successfully!";
+              req.flash("error", error);
+              res.redirect("/MathOlympiad/list");
+            })
+            .catch(() => {
+              let error = "Data could not be updated!";
+              req.flash("error", error);
+              res.redirect("/MathOlympiad/list");
+            });
+      })
+      .catch(() => {
+        let error = "Data could not be updated!";
+        req.flash("error", error);
+        res.redirect("/MathOlympiad/list");
+      });
 };
 
 const selectMO = (req, res) => {
   const id = req.params.id;
 
   MathOlympiad.findOne({ _id: id })
-    .then((participant) => {
-      participant.selected = true;
-      participant
-        .save()
-        .then(() => {
-          let error = "Participant has been selected successfully!";
-          req.flash("error", error);
-          res.redirect("/MathOlympiad/list");
-        })
-        .catch(() => {
-          let error = "Data could not be updated!";
-          req.flash("error", error);
-          res.redirect("/MathOlympiad/list");
-        });
-    })
-    .catch(() => {
-      let error = "Data could not be updated!";
-      req.flash("error", error);
-      res.redirect("/MathOlympiad/list");
-    });
+      .then((participant) => {
+        participant.selected = true;
+        participant
+            .save()
+            .then(() => {
+              let error = "Participant has been selected successfully!";
+              req.flash("error", error);
+              res.redirect("/MathOlympiad/list");
+            })
+            .catch(() => {
+              let error = "Data could not be updated!";
+              req.flash("error", error);
+              res.redirect("/MathOlympiad/list");
+            });
+      })
+      .catch(() => {
+        let error = "Data could not be updated!";
+        req.flash("error", error);
+        res.redirect("/MathOlympiad/list");
+      });
 };
 
 module.exports = {
