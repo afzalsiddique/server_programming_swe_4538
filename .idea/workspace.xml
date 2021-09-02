@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b3c9eb16-6ae9-475a-b3af-8e7f39294f28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/programmingContest.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/programmingContest.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

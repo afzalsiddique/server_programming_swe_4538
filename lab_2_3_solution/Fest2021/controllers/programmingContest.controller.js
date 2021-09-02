@@ -3,6 +3,13 @@ const user= process.env.UserEmail
 const pass= process.env.UserPass
 const subject = "Programming Contest registration completed successfully."
 const mailBody = "some body";
+const callbackFunc= function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          }
 
 const nodemailer = require('nodemailer')
 
@@ -48,8 +55,6 @@ const postCP = (req, res) => {
   let error = "";
 
 
-  const options=
-
   ProgrammingContest.findOne({
     teamName: teamName,
     institution: institution,
@@ -61,75 +66,18 @@ const postCP = (req, res) => {
       res.redirect("/ProgrammingContest/register");
     } else {
       const team = new ProgrammingContest({
-        teamName,
-        institution,
-        coach,
-        contactCoach,
-        emailCoach,
-        tshirtCoach,
-        leader,
-        contactLeader,
-        emailLeader,
-        tshirtLeader,
-        member1,
-        contactMember1,
-        emailMember1,
-        tshirtMember1,
-        member2,
-        contactMember2,
-        emailMember2,
-        tshirtMember2,
-        total,
-        paid,
-        selected,
+        teamName, institution, coach, contactCoach, emailCoach, tshirtCoach, leader, contactLeader,
+        emailLeader, tshirtLeader, member1, contactMember1, emailMember1, tshirtMember1, member2,
+        contactMember2, emailMember2, tshirtMember2, total, paid, selected,
       });
       team
         .save()
         .then(() => {
           error = "Team has been registered successfully!";
-          transporter.sendMail({ from:user, to: emailLeader, subject: subject, text: mailBody
-  }, function (err, info){
-            if (err){
-              console.log(err)
-              return
-            }
-            console.log("Sent: "+info.response)
-          })
-
-          transporter.sendMail({ from:user, to: emailLeader, subject: subject, text: mailBody},
-           function (err, info){
-            if (err){
-              console.log(err)
-              return
-            }
-            console.log("Sent: "+info.response)
-          })
-
-          transporter.sendMail({ from:user, to: emailCoach, subject: subject, text: mailBody
-          }, function (err, info){
-            if (err){
-              console.log(err)
-              return
-            }
-            console.log("Sent: "+info.response)
-          })
-
-          transporter.sendMail({ from:user, to: emailMember1, subject: subject, text: mailBody
-          }, function (err, info){
-            if (err){
-              console.log(err)
-              return
-            }
-            console.log("Sent: "+info.response)
-          })
-          transporter.sendMail({ from:user, to: emailMember2, subject: subject, text: mailBody
-          }, function (err, info){
-            if (err){
-              console.log(err)
-              return
-            }
-            console.log("Sent: "+info.response)
-          })
+          transporter.sendMail({ from:user, to: emailLeader, subject: subject, text: mailBody }, callbackFunc)
+          transporter.sendMail({ from:user, to: emailCoach, subject: subject, text: mailBody}, callbackFunc)
+          transporter.sendMail({ from:user, to: emailMember1, subject: subject, text: mailBody},callbackFunc)
+          transporter.sendMail({ from:user, to: emailMember2, subject: subject, text: mailBody}, callbackFunc)
 
           console.log(error);
           req.flash("error", error);
