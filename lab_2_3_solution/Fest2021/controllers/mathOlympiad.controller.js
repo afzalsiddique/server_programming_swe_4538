@@ -1,4 +1,17 @@
+require('dotenv').config();
 const MathOlympiad = require("../models/MathOlympiad.model");
+const user= process.env.UserEmail
+const pass= process.env.UserPass
+
+const nodemailer = require('nodemailer')
+
+const transporter = nodemailer.createTransport({
+  service: "hotmail",
+  auth: {
+    user: user,
+    pass: pass
+  }
+})
 
 const getMO = (req, res) => {
   res.render("math-olympiad/register.ejs", { error: req.flash("error") });
@@ -14,6 +27,13 @@ const postMO = (req, res) => {
     registrationFee = 400;
   } else {
     registrationFee = 500;
+  }
+
+  const options={
+    from:user,
+    to: email,
+    subject: "Registration successfully completed for Math Olympiad",
+    text: "Hey if this mail comes to you. then it node mailer worked perfectly. Thanks."
   }
 
   const total = registrationFee;
@@ -43,6 +63,13 @@ const postMO = (req, res) => {
         .save()
         .then(() => {
           error = "Participant has been registered successfully!";
+          transporter.sendMail(options, function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          })
           req.flash("error", error);
           res.redirect("/MathOlympiad/register");
         })

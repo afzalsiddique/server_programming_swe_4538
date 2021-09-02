@@ -1,3 +1,18 @@
+require('dotenv').config();
+const user= process.env.UserEmail
+const pass= process.env.UserPass
+const subject = "Programming Contest registration completed successfully."
+const mailBody = "some body";
+
+const nodemailer = require('nodemailer')
+
+const transporter = nodemailer.createTransport({
+  service: "hotmail",
+  auth: {
+    user: user,
+    pass: pass
+  }
+})
 const ProgrammingContest = require("../models/ProgrammingContest.model");
 
 const getCP = (req, res) => {
@@ -31,6 +46,9 @@ const postCP = (req, res) => {
   const paid = 0;
   const selected = false;
   let error = "";
+
+
+  const options=
 
   ProgrammingContest.findOne({
     teamName: teamName,
@@ -69,6 +87,50 @@ const postCP = (req, res) => {
         .save()
         .then(() => {
           error = "Team has been registered successfully!";
+          transporter.sendMail({ from:user, to: emailLeader, subject: subject, text: mailBody
+  }, function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          })
+
+          transporter.sendMail({ from:user, to: emailLeader, subject: subject, text: mailBody},
+           function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          })
+
+          transporter.sendMail({ from:user, to: emailCoach, subject: subject, text: mailBody
+          }, function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          })
+
+          transporter.sendMail({ from:user, to: emailMember1, subject: subject, text: mailBody
+          }, function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          })
+          transporter.sendMail({ from:user, to: emailMember2, subject: subject, text: mailBody
+          }, function (err, info){
+            if (err){
+              console.log(err)
+              return
+            }
+            console.log("Sent: "+info.response)
+          })
+
           console.log(error);
           req.flash("error", error);
           res.redirect("/ProgrammingContest/register");
