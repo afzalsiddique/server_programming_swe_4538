@@ -89,6 +89,10 @@ const CPSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  teamHashValue: {
+    type: String,
+    required: false,
+  },
 });
 
 const ProgrammingContest = mongoose.model("ProgrammingContest", CPSchema);
