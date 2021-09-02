@@ -14,11 +14,11 @@
         <br />
 
         <% let success3="Team has been selected successfully!" %> <% let
-        success="Data has been deleted successfully!" %> <% let
-        success2="Payment completed successfully!" %>
+                success="Data has been deleted successfully!" %> <% let
+                success2="Payment completed successfully!" %>
         <% let success4="Data has been updated!" %>
         <%if(error.length>0){if((error==success) || (error==success2) ||
-        (error==success3)||(error==success4)){%>
+                (error==success3)||(error==success4)){%>
         <div class="alert alert-success"><%=error%></div>
         <%}else{%>
         <div class="alert alert-danger"><%=error%></div>
@@ -28,61 +28,61 @@
           <div class="col-sm-12">
             <div class="card-box table-responsive">
               <table
-                id="datatable-responsive"
-                class="table table-striped table-bordered dt-responsive nowrap"
-                cellspacing="0"
-                width="100%"
+                      id="datatable-responsive"
+                      class="table table-striped table-bordered dt-responsive nowrap"
+                      cellspacing="0"
+                      width="100%"
               >
                 <thead>
-                  <tr>
-                    <th colspan="2">Team Information</th>
-                    <th colspan="4">Coach Information</th>
-                    <th colspan="4">Team Leader Information</th>
-                    <th colspan="4">Member-1 Information</th>
-                    <th colspan="4">Member-2 Information</th>
-                    <th colspan="8">Others</th>
-                  </tr>
-                  <tr>
-                    <th>Team<br />Name</th>
-                    <th>Institution</th>
+                <tr>
+                  <th colspan="2">Team Information</th>
+                  <th colspan="4">Coach Information</th>
+                  <th colspan="4">Team Leader Information</th>
+                  <th colspan="4">Member-1 Information</th>
+                  <th colspan="4">Member-2 Information</th>
+                  <th colspan="8">Others</th>
+                </tr>
+                <tr>
+                  <th>Team ID</th>
+                  <th>Team<br />Name</th>
+                  <th>Institution</th>
 
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Email</th>
-                    <th>T-Shirt</th>
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Email</th>
-                    <th>T-Shirt</th>
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Email</th>
-                    <th>T-Shirt</th>
-                    <th>Name</th>
-                    <th>Contact No.</th>
-                    <th>Email</th>
-                    <th>T-Shirt</th>
+                  <th>Name</th>
+                  <th>Contact No.</th>
+                  <th>Email</th>
 
-                    <th>Total</th>
-                    <th>Paid</th>
-                    <th>Selected</th>
-                    <th>Payment<br />Status</th>
-                    <th>Select</th>
-                    <th>Payment<br />Done</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                  </tr>
+                  <th>Name</th>
+                  <th>Contact No.</th>
+                  <th>Email</th>
+                  <th>T-Shirt</th>
+                  <th>Name</th>
+                  <th>Contact No.</th>
+                  <th>Email</th>
+                  <th>T-Shirt</th>
+                  <th>Name</th>
+                  <th>Contact No.</th>
+                  <th>Email</th>
+                  <th>T-Shirt</th>
+
+                  <th>Total</th>
+                  <th>Paid</th>
+                  <th>Selected</th>
+                  <th>Payment<br />Status</th>
+                  <th>Select</th>
+                  <th>Payment<br />Done</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
                 </thead>
                 <tbody>
-                  <% if(teams.length>0){ teams.forEach(team=>{%>
+                <% if(teams.length>0){ teams.forEach(team=>{%>
                   <tr>
+                    <td><%= team.teamHash %></td>
                     <td><%= team.teamName %></td>
                     <td><%= team.institution %></td>
-
                     <td><%= team.coach %></td>
                     <td><%= team.contactCoach %></td>
                     <td><%= team.emailCoach %></td>
-                    <td><%= team.tshirtCoach %></td>
                     <td><%= team.leader %></td>
                     <td><%= team.contactLeader %></td>
                     <td><%= team.emailLeader %></td>
@@ -95,25 +95,22 @@
                     <td><%= team.contactMember2 %></td>
                     <td><%= team.emailMember2 %></td>
                     <td><%= team.tshirtMember2 %></td>
-
                     <td><%= team.total %></td>
                     <td><%= team.paid %></td>
-
                     <td>
                       <% if(team.selected==true){%>
-                      <p style="color: green">Yes</p>
+                        <p style="color: green">Yes</p>
                       <%}else{%>
-                      <p style="color: red">No</p>
+                        <p style="color: red">No</p>
                       <%}%>
                     </td>
                     <td>
                       <% if(team.paid==team.total){%>
-                      <p style="color: green">Successful</p>
+                        <p style="color: green">Successful</p>
                       <%}else{%>
-                      <p style="color: red">Incomplete</p>
+                        <p style="color: red">Incomplete</p>
                       <%}%>
                     </td>
-
                     <td>
                       <% const selectURL="select/"+team._id%>
                       <a href="<%= selectURL %>">
@@ -143,7 +140,7 @@
                       </a>
                     </td>
                   </tr>
-                  <% }) } %>
+                <% }) } %>
                 </tbody>
               </table>
             </div>

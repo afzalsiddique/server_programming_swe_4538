@@ -12,7 +12,7 @@ const teamHash = randomstring.generate({
 // console.log(teamHash);
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: "hotmail",
     auth: {
         user: senderMail,
         pass: password,
