@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c9eb16-6ae9-475a-b3af-8e7f39294f28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/email_sender.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/.env" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/email_sender.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/email_sender.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gdrive\IUT\semester_5\swe_4538_server_programming_lab\server_programming_swe_4538\lab_2_3_solution\Fest2021\views" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gdrive\IUT\semester_5\swe_4538_server_programming_lab\server_programming_swe_4538\lab_2_3_solution\Fest2021" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,7 +63,7 @@
       <workItem from="1628191811293" duration="15000" />
       <workItem from="1628238178855" duration="2846000" />
       <workItem from="1628950273067" duration="9000" />
-      <workItem from="1630588260843" duration="2599000" />
+      <workItem from="1630588260843" duration="3399000" />
     </task>
     <servers />
   </component>

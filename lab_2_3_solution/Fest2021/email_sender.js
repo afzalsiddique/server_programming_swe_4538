@@ -1,15 +1,19 @@
+require('dotenv').config();
+const user= process.env.UserEmail
+const pass= process.env.UserPass
+
 const nodemailer = require('nodemailer')
 
 const transporter = nodemailer.createTransport({
     service: "hotmail",
     auth: {
-        user: "node-1224@outlook.com",
-        pass: "Y5eWPsqUEUFFh2JN"
+        user: user,
+        pass: pass
     }
 })
 
 const options={
-    from:"node-1224@outlook.com",
+    from:user,
     to: "deeepcoding@gmail.com",
     subject: "node mailer test email",
     text: "Hey if this mail comes to you. then it node mailer worked perfectly. Thanks."
