@@ -1,70 +1,59 @@
 const mongoose = require("mongoose");
-const PCSchema = new mongoose.Schema({
+const CPSchema = new mongoose.Schema({
   teamName: {
     type: String,
     required: true,
   },
-  institutionName: {
+  coach: {
     type: String,
     required: true,
   },
-  coachName: {
+  leader: {
     type: String,
     required: true,
   },
-  coachContact: {
+  member1: {
     type: String,
     required: true,
   },
-  coachEmail: {
+  member2: {
     type: String,
     required: true,
   },
-  leaderName: {
+  contactCoach: {
     type: String,
     required: true,
   },
-  leaderContact: {
+  contactLeader: {
     type: String,
     required: true,
   },
-  leaderEmail: {
+  contactMember1: {
     type: String,
     required: true,
   },
-  leadertshirt: {
+  contactMember2: {
     type: String,
     required: true,
   },
-  member1Name: {
+
+  emailCoach: {
     type: String,
     required: true,
   },
-  member1Contact: {
+  emailLeader: {
     type: String,
     required: true,
   },
-  member1Email: {
+  emailMember1: {
     type: String,
     required: true,
   },
-  member1tshirt: {
+  emailMember2: {
     type: String,
     required: true,
   },
-  member2Name: {
-    type: String,
-    required: true,
-  },
-  member2Contact: {
-    type: String,
-    required: true,
-  },
-  member2Email: {
-    type: String,
-    required: true,
-  },
-  member2tshirt: {
+  institution: {
     type: String,
     required: true,
   },
@@ -80,11 +69,27 @@ const PCSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  tshirtCoach: {
+    type: String,
+    required: true,
+  },
+  tshirtLeader: {
+    type: String,
+    required: true,
+  },
+  tshirtMember1: {
+    type: String,
+    required: true,
+  },
+  tshirtMember2: {
+    type: String,
+    required: true,
+  },
   date: {
     type: Date,
     default: Date.now,
   },
 });
 
-const ProgContest = mongoose.model("ProgContest", PCSchema);
-module.exports = ProgContest;
+const ProgrammingContest = mongoose.model("ProgrammingContest", CPSchema);
+module.exports = ProgrammingContest;

@@ -13,11 +13,12 @@
       <div class="x_content">
         <br />
 
-        <% let success="Data has been deleted successfully!" %> <% let
-        success2="Payment completed successfully!" %> <% let
-        success3="Participant has been selected successfully!" %>
+        <% let success3="Team has been selected successfully!" %> <% let
+        success="Data has been deleted successfully!" %> <% let
+        success2="Payment completed successfully!" %>
+        <% let success4="Data has been updated!" %>
         <%if(error.length>0){if((error==success) || (error==success2) ||
-        (error==success3)){%>
+        (error==success3)||(error==success4)){%>
         <div class="alert alert-success"><%=error%></div>
         <%}else{%>
         <div class="alert alert-danger"><%=error%></div>
@@ -34,12 +35,34 @@
               >
                 <thead>
                   <tr>
-                    <th>Team</th>
+                    <th colspan="2">Team Information</th>
+                    <th colspan="4">Coach Information</th>
+                    <th colspan="4">Team Leader Information</th>
+                    <th colspan="4">Member-1 Information</th>
+                    <th colspan="4">Member-2 Information</th>
+                    <th colspan="8">Others</th>
+                  </tr>
+                  <tr>
+                    <th>Team<br />Name</th>
                     <th>Institution</th>
-                    <th>Coach</th>
-                    <th>Leader</th>
-                    <th>Member1</th>
-                    <th>Member2</th>
+
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Email</th>
+                    <th>T-Shirt</th>
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Email</th>
+                    <th>T-Shirt</th>
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Email</th>
+                    <th>T-Shirt</th>
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Email</th>
+                    <th>T-Shirt</th>
+
                     <th>Total</th>
                     <th>Paid</th>
                     <th>Selected</th>
@@ -51,26 +74,40 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <% if(participants.length>0){
-                  participants.forEach(participant=>{%>
+                  <% if(teams.length>0){ teams.forEach(team=>{%>
                   <tr>
-                    <td><%= participant.teamName %></td>
-                    <td><%= participant.institutionName %></td>
-                    <td><%= participant.coachName %></td>
-                    <td><%= participant.leaderName %></td>
-                    <td><%= participant.member1Name %></td>
-                    <td><%= participant.member2Name %></td>
-                    <td><%= participant.total %></td>
-                    <td><%= participant.paid %></td>
+                    <td><%= team.teamName %></td>
+                    <td><%= team.institution %></td>
+
+                    <td><%= team.coach %></td>
+                    <td><%= team.contactCoach %></td>
+                    <td><%= team.emailCoach %></td>
+                    <td><%= team.tshirtCoach %></td>
+                    <td><%= team.leader %></td>
+                    <td><%= team.contactLeader %></td>
+                    <td><%= team.emailLeader %></td>
+                    <td><%= team.tshirtLeader %></td>
+                    <td><%= team.member1 %></td>
+                    <td><%= team.contactMember1 %></td>
+                    <td><%= team.emailMember1 %></td>
+                    <td><%= team.tshirtMember1 %></td>
+                    <td><%= team.member2 %></td>
+                    <td><%= team.contactMember2 %></td>
+                    <td><%= team.emailMember2 %></td>
+                    <td><%= team.tshirtMember2 %></td>
+
+                    <td><%= team.total %></td>
+                    <td><%= team.paid %></td>
+
                     <td>
-                      <% if(participant.selected==true){%>
+                      <% if(team.selected==true){%>
                       <p style="color: green">Yes</p>
                       <%}else{%>
                       <p style="color: red">No</p>
                       <%}%>
                     </td>
                     <td>
-                      <% if(participant.paid==participant.total){%>
+                      <% if(team.paid==team.total){%>
                       <p style="color: green">Successful</p>
                       <%}else{%>
                       <p style="color: red">Incomplete</p>
@@ -78,28 +115,28 @@
                     </td>
 
                     <td>
-                      <% const selectURL="select/"+participant._id%>
+                      <% const selectURL="select/"+team._id%>
                       <a href="<%= selectURL %>">
                         <i class="fa fa-check"></i>
                         <span class="fa fa-chevron"></span>
                       </a>
                     </td>
                     <td>
-                      <% const paymentDoneURL="paymentDone/"+participant._id%>
+                      <% const paymentDoneURL="paymentDone/"+team._id%>
                       <a href="<%= paymentDoneURL %>">
                         <i class="fa fa-money"></i>
                         <span class="fa fa-chevron"></span>
                       </a>
                     </td>
                     <td>
-                      <% const editURL="edit/"+participant._id%>
+                      <% const editURL="edit/"+team._id%>
                       <a href="<%= editURL %>">
                         <i class="fa fa-pencil"></i>
                         <span class="fa fa-chevron"></span>
                       </a>
                     </td>
                     <td>
-                      <% const deleteURL="delete/"+participant._id%>
+                      <% const deleteURL="delete/"+team._id%>
                       <a href="<%= deleteURL %>">
                         <i class="fa fa-trash"></i>
                         <span class="fa fa-chevron"></span>
