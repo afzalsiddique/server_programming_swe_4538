@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c9eb16-6ae9-475a-b3af-8e7f39294f28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/email_sender.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/config/passport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/progContest.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/users.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/middlewares/auth.middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/MathOlympiad.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/ProgContest.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/models/User.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/MathOlympiad.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/index.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/progContest.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/routes/users.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/list-content.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/pc/register-content.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-partials/sidebar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/prog-contest/list.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/prog-contest/register.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +62,7 @@
       <workItem from="1628191811293" duration="15000" />
       <workItem from="1628238178855" duration="2846000" />
       <workItem from="1628950273067" duration="9000" />
-      <workItem from="1630588260843" duration="995000" />
+      <workItem from="1630588260843" duration="2599000" />
     </task>
     <servers />
   </component>
