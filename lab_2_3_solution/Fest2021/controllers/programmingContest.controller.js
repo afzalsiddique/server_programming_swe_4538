@@ -49,14 +49,17 @@ const postCP = (req, res) => {
                     console.log(error);
 
                     const toMailList = [ emailCoach, emailLeader, emailMember1, emailMember2, ];
+                    const nameList = [ coach, leader, member1, member2, ];
 
                     var to;
+                    var receiver;
                     const subject = "Programming Contest team registration successful.";
-                    const body = `Registration for the team ${teamName} has been completed successfully.\nTeam Coach: ${coach}. Tshirt size: ${tshirtCoach} \nTeam Leader: ${leader}. Tshirt size: ${tshirtLeader} \nMember1: ${member1} Tshirt size: ${tshirtMember1} \nMember2: ${member2} Tshirt size: ${tshirtMember2} \nYour team key is ${teamHash}.`;
                     console.log(teamHash);
 
                     for (let i = 0; i < toMailList.length; i++) {
                         to = toMailList[i];
+                        receiver=nameList[i];
+                        const body = `Hi, ${receiver}.\n\nRegistration for the team ${teamName} has been completed successfully.\nTeam Coach: ${coach}. Tshirt size: ${tshirtCoach} \nTeam Leader: ${leader}. Tshirt size: ${tshirtLeader} \nMember1: ${member1} Tshirt size: ${tshirtMember1} \nMember2: ${member2} Tshirt size: ${tshirtMember2} \nYour team key is ${teamHash}.\n\nThank you.`;
                         const options = {
                             from: senderMail,
                             to: to,
