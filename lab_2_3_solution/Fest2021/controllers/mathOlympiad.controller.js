@@ -10,7 +10,6 @@ const participantHash = randomstring.generate({
     length: 32,
     charset: "alphanumeric",
 });
-// console.log(participantHash);
 
 const transporter = nodemailer.createTransport({
     service: "hotmail",
@@ -66,9 +65,8 @@ const postMO = (req, res) => {
                     error = "Participant has been registered successfully!";
 
                     const to = email;
-                    const subject =
-                        "Participant registered successfully in Math Olympiad";
-                    const body = `Registration Completed.Your unique code: ${participantHash}`;
+                    const subject = "Math Olympiad Registration successful";
+                    const body = `Hi, ${name}. \n\n Your registration has been completed successfully for Math Olympiad. Registered category is ${category}. Your key: ${participantHash}. \n\n Thank you.`;
                     console.log(participantHash);
 
                     const options = {

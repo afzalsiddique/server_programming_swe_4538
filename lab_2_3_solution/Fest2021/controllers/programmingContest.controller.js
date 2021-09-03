@@ -9,7 +9,6 @@ const teamHash = randomstring.generate({
     length: 32,
     charset: "alphanumeric",
 });
-// console.log(teamHash);
 
 const transporter = nodemailer.createTransport({
     service: "hotmail",
@@ -92,16 +91,11 @@ const postCP = (req, res) => {
                     error = "Team has been registered successfully!";
                     console.log(error);
 
-                    const toMailList = [
-                        emailCoach,
-                        emailLeader,
-                        emailMember1,
-                        emailMember2,
-                    ];
+                    const toMailList = [ emailCoach, emailLeader, emailMember1, emailMember2, ];
 
                     var to;
-                    const subject = "Team registered successfully in Programming Contest";
-                    const body = `Your team's registration successfully completed. Your identifier is: ${teamHash}`;
+                    const subject = "Programming Contest team registration successful.";
+                    const body = `Registration for the team ${teamName} has been completed successfully.\nTeam Coach: ${coach} \nTeam Leader: ${leader} \nMember1: ${member1}\nMember2: ${member2}\nYour team key is ${teamHash}.`;
                     console.log(teamHash);
 
                     for (let i = 0; i < toMailList.length; i++) {
