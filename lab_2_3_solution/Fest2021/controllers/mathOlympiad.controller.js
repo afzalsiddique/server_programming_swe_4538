@@ -1,15 +1,10 @@
 const randomstring = require("randomstring");
-
 const MathOlympiad = require("../models/MathOlympiad.model");
 const nodemailer = require("nodemailer");
 
 const senderMail = process.env.UserEmail;
 const password = process.env.UserPass;
 
-const participantHash = randomstring.generate({
-    length: 32,
-    charset: "alphanumeric",
-});
 
 const transporter = nodemailer.createTransport({
     service: "hotmail",
@@ -25,6 +20,10 @@ const getMO = (req, res) => {
 
 const postMO = (req, res) => {
     const { name, category, contact, email, institution, tshirt } = req.body;
+    const participantHash = randomstring.generate({
+        length: 32,
+        charset: "alphanumeric",
+    });
 
     let registrationFee = 0;
     if (category == "School") {

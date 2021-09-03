@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/mathOlympiad.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/programmingContest.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/controllers/programmingContest.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/cp/list-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/cp/list-content.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/cp/register-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/cp/register-content.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/mo/list-content.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2_3_solution/Fest2021/views/admin-pages/mo/list-content.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <workItem from="1628238178855" duration="2846000" />
       <workItem from="1628950273067" duration="9000" />
       <workItem from="1630588260843" duration="3399000" />
-      <workItem from="1630640140475" duration="1323000" />
+      <workItem from="1630640140475" duration="2787000" />
     </task>
     <servers />
   </component>

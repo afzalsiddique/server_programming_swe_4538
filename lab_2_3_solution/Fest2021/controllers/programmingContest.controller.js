@@ -5,10 +5,6 @@ const nodemailer = require("nodemailer");
 const senderMail = process.env.UserEmail;
 const password = process.env.UserPass;
 
-const teamHash = randomstring.generate({
-    length: 32,
-    charset: "alphanumeric",
-});
 
 const transporter = nodemailer.createTransport({
     service: "hotmail",
@@ -25,31 +21,12 @@ const getCP = (req, res) => {
 };
 
 const postCP = (req, res) => {
-    const {
-        teamName,
-        institution,
-        coach,
-        contactCoach,
-        emailCoach,
-        tshirtCoach,
-        leader,
-        contactLeader,
-        emailLeader,
-        tshirtLeader,
-        member1,
-        contactMember1,
-        emailMember1,
-        tshirtMember1,
-        member2,
-        contactMember2,
-        emailMember2,
-        tshirtMember2,
-    } = req.body;
-
+    const { teamName, institution, coach, contactCoach, emailCoach, tshirtCoach, leader, contactLeader, emailLeader, tshirtLeader, member1, contactMember1, emailMember1, tshirtMember1, member2, contactMember2, emailMember2, tshirtMember2, } = req.body;
     const total = 2000;
     const paid = 0;
     const selected = false;
     let error = "";
+    const teamHash = randomstring.generate({ length: 32, charset: "alphanumeric", });
 
     ProgrammingContest.findOne({
         teamName: teamName,
@@ -62,29 +39,9 @@ const postCP = (req, res) => {
             res.redirect("/ProgrammingContest/register");
         } else {
             const team = new ProgrammingContest({
-                teamName,
-                institution,
-                coach,
-                contactCoach,
-                emailCoach,
-                tshirtCoach,
-                leader,
-                contactLeader,
-                emailLeader,
-                tshirtLeader,
-                member1,
-                contactMember1,
-                emailMember1,
-                tshirtMember1,
-                member2,
-                contactMember2,
-                emailMember2,
-                tshirtMember2,
-                total,
-                paid,
-                selected,
-                teamHash,
-            });
+                teamName, institution, coach, contactCoach, emailCoach, tshirtCoach, leader, contactLeader, emailLeader, tshirtLeader,
+                member1, contactMember1, emailMember1, tshirtMember1, member2, contactMember2, emailMember2, tshirtMember2,
+                total, paid, selected, teamHash, });
             team
                 .save()
                 .then(() => {
@@ -95,7 +52,7 @@ const postCP = (req, res) => {
 
                     var to;
                     const subject = "Programming Contest team registration successful.";
-                    const body = `Registration for the team ${teamName} has been completed successfully.\nTeam Coach: ${coach} \nTeam Leader: ${leader} \nMember1: ${member1}\nMember2: ${member2}\nYour team key is ${teamHash}.`;
+                    const body = `Registration for the team ${teamName} has been completed successfully.\nTeam Coach: ${coach}. Tshirt size: ${tshirtCoach} \nTeam Leader: ${leader}. Tshirt size: ${tshirtLeader} \nMember1: ${member1} Tshirt size: ${tshirtMember1} \nMember2: ${member2} Tshirt size: ${tshirtMember2} \nYour team key is ${teamHash}.`;
                     console.log(teamHash);
 
                     for (let i = 0; i < toMailList.length; i++) {
@@ -237,53 +194,17 @@ const editCP = (req, res) => {
 };
 
 const postEditCP = (req, res) => {
-    const {
-        teamName,
-        institution,
-        coach,
-        contactCoach,
-        emailCoach,
-        tshirtCoach,
-        leader,
-        contactLeader,
-        emailLeader,
-        tshirtLeader,
-        member1,
-        contactMember1,
-        emailMember1,
-        tshirtMember1,
-        member2,
-        contactMember2,
-        emailMember2,
-        tshirtMember2,
-    } = req.body;
-    console.log("here");
+    const { teamName, institution, coach, contactCoach, emailCoach, tshirtCoach, leader, contactLeader, emailLeader, tshirtLeader, member1, contactMember1,
+        emailMember1, tshirtMember1, member2, contactMember2, emailMember2, tshirtMember2, } = req.body;
+    // console.log("here");
 
     ProgrammingContest.updateOne(
         {
             _id: req.params.id,
         },
         {
-            $set: {
-                teamName,
-                institution,
-                coach,
-                contactCoach,
-                emailCoach,
-                tshirtCoach,
-                leader,
-                contactLeader,
-                emailLeader,
-                tshirtLeader,
-                member1,
-                contactMember1,
-                emailMember1,
-                tshirtMember1,
-                member2,
-                contactMember2,
-                emailMember2,
-                tshirtMember2,
-            },
+            $set: { teamName, institution, coach, contactCoach, emailCoach, tshirtCoach, leader, contactLeader, emailLeader, tshirtLeader,
+                member1, contactMember1, emailMember1, tshirtMember1, member2, contactMember2, emailMember2, tshirtMember2, },
         }
     )
         .then(() => {
@@ -298,13 +219,4 @@ const postEditCP = (req, res) => {
         });
 };
 
-module.exports = {
-    getCP,
-    postCP,
-    getCPList,
-    deleteCP,
-    paymentDoneCP,
-    selectCP,
-    editCP,
-    postEditCP,
-};
+module.exports = { getCP, postCP, getCPList, deleteCP, paymentDoneCP, selectCP, editCP, postEditCP, };
